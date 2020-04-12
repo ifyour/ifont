@@ -4,11 +4,10 @@
 
 ## Usage
 
-![demo](./assets/demo.jpg)
-
-## 👇Try it!
-
-https://jsfiddle.net/ifyour/c7rovexs/
+<div style="text-align: center;">
+  <img src="./assets/demo.jpg)" width="50%">
+  Try it! 👉https://jsfiddle.net/ifyour/c7rovexs/
+</div>
 
 ## TODO
 

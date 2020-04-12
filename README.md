@@ -8,7 +8,7 @@
   🎉 <a href="https://codepen.io/ifyour/pen/RwWPbaz?editors=1100">Try it on Codepen.io!</a>
 </p>
 <p align="left">
-  <img src="./assets/demo.jpg" alt="demo" width="70%">
+  <img src="./assets/demo.jpg" alt="demo" width="80%">
 </p>
 
 ## TODO

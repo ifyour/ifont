@@ -26,6 +26,6 @@
 - [ ] 官网
 - [ ] 更多字体及用法
 
-## License 许可
+## License
 
 MIT

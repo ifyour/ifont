@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "routes": [
+    {
+      "src": "/api/font.ttf",
+      "methods": [
+        "GET"
+      ],
+      "dest": "/api/font.js"
+    }
+  ]
+}

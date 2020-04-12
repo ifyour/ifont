@@ -4,8 +4,8 @@
 
 ## Usage
 
-<div style="text-align: center;">
-  <img src="./assets/demo.jpg)" width="50%">
+<div align="center">
+  <img src="./assets/demo.jpg" width="50%">
   Try it! 👉https://jsfiddle.net/ifyour/c7rovexs/
 </div>
 

@@ -4,10 +4,12 @@
 
 ## Usage
 
-<div align="center">
-  <img src="./assets/demo.jpg" width="50%">
-  Try it! 👉https://jsfiddle.net/ifyour/c7rovexs/
-</div>
+<p align="center">
+  <a href="https://jsfiddle.net/ifyour/c7rovexs/">Try it! 👉JsFiddle Demo</a>
+</p>
+<p align="center">
+  <img src="./assets/demo.jpg" alt="demo" width="70%">
+</p>
 
 ## TODO
 

@@ -4,12 +4,8 @@
 
 ## Usage
 
-<p align="center">
-  <a href="https://jsfiddle.net/ifyour/c7rovexs/">Try it! 👉JsFiddle Demo</a>
-</p>
-<p align="center">
-  <img src="./assets/demo.jpg" alt="demo" width="70%">
-</p>
+🎉[Try it! 👉JsFiddle](https://jsfiddle.net/ifyour/c7rovexs/)
+<img src="./assets/demo.jpg" alt="demo" width="70%">
 
 ## TODO
 

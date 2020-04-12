@@ -8,10 +8,10 @@
   🎉 <a href="https://codepen.io/ifyour/pen/RwWPbaz?editors=1100">Try it on Codepen.io!</a>
 </p>
 <p align="left">
-  <img src="./assets/demo.jpg" alt="demo" width="80%">
+  <img src="./assets/demo.jpg" alt="demo" width="100%">
 </p>
 
-## TODO
+## Todo
 
 - [ ] 官网
 - [ ] 更多字体及用法

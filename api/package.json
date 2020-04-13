@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "fontmin": "^0.9.8"
+    "fontmin": "^0.9.8",
+    "nanoid": "^3.1.3"
   }
 }

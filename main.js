@@ -1,7 +1,8 @@
 const generateFontsList = require('./preBuildJson/fontList');
 
-async function main() {
+//
+// pre-build
+//
+async(() => {
   await generateFontsList('./assets/fonts/');
-}
-
-main();
+})()

@@ -11,13 +11,13 @@ const DIST_DIR = './db/fontList.json';
 async function generateFontsList(fontsDir) {
   try {
     let nameList = await fsPromises.readdir(fontsDir);
-    const res = nameList.map(name => ({
+    nameList = nameList.map(name => ({
       id: nanoid(10),
       name,
     }));
     writeFileSync(
       resolveFile(DIST_DIR),
-      JSON.stringify(res, null, 2),
+      JSON.stringify(nameList, null, 2),
       'utf-8'
     )
     console.log('[iFont PreBuild] fontList.json build success!');

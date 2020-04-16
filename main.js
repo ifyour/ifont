@@ -1,5 +1,4 @@
-// const { generateFontsList } = require('./preBuildJson/');
-const { generateFontList } = require('./preBuildJson/');
+const { generateFontList } = require('./build');
 
 //
 // pre-build

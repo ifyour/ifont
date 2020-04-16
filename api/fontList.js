@@ -1,4 +1,4 @@
-const data = require('../preBuildJson/db/fontList.json');
+const data = require('../build/db/fontList.json');
 
 module.exports = (req, res) => {
   res.json({

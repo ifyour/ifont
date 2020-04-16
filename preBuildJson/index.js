@@ -1,12 +1,13 @@
 const path = require('path');
+
 const resolveFile = file => path.resolve(__dirname, file);
 const fsPromises = require('fs').promises;
+
 const { writeFile, readdir } = fsPromises;
 const { getFontName } = require('./utlis');
 
-
 // 生成字体 API
-async function generateFonts() { }
+// async function generateFonts() { }
 
 //
 // 生成字体列表
@@ -25,6 +26,6 @@ async function generateFontList() {
 }
 
 module.exports = {
-  generateFonts,
+  // generateFonts,
   generateFontList,
-}
+};

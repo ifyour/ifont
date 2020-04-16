@@ -6,4 +6,4 @@ const { generateFontList } = require('./preBuildJson/');
 //
 (async () => {
   await generateFontList();
-})()
+})();

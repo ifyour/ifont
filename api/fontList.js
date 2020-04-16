@@ -5,5 +5,5 @@ module.exports = (req, res) => {
     isSuccess: true,
     msg: '操作成功',
     data,
-  })
-}
+  });
+};

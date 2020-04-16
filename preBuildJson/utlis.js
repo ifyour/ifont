@@ -6,5 +6,5 @@ function getFontName(req) {
 }
 
 module.exports = {
-  getFontName
-}
+  getFontName,
+};

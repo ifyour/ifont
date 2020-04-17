@@ -1,6 +1,6 @@
 const path = require('path');
 const fsPromises = require('fs').promises;
-const { writeFileSync, readFileSync } = require('fs');
+const { writeFileSync, readFileSync, statSync } = require('fs');
 
 const { writeFile, readdir } = fsPromises;
 const resolveFile = file => path.resolve(__dirname, file);
@@ -35,7 +35,15 @@ async function generateFontList() {
   const DIST_DIR = resolveFile('./db/fontList.json');
   try {
     let nameList = await readdir(FONTS_DIR);
-    nameList = nameList.map((name, index) => ({ id: index + 1, name }));
+    nameList = nameList.map((name, index) => {
+      const { size } = statSync(path.resolve(__dirname, FONTS_DIR, name));
+      const corverSize = size => Number(size / 1024 / 1024).toFixed(2) + ' MB';
+      return {
+        id: index + 1,
+        name,
+        size: corverSize(size)
+      };
+    });
     await writeFile(DIST_DIR, JSON.stringify(nameList, null, 2), 'utf-8');
     console.log('[🦀️ iFont] PreBuildAPI: /fontList build success!');
   } catch (error) {

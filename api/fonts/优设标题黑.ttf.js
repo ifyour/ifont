@@ -2,12 +2,11 @@ const { Stream } = require('stream');
 const Fontmin = require('fontmin');
 const path = require('path');
 
-function generateFontStream(fontName, content) {
-  const [prefixName, suffixType] = fontName.split('.');
+function generateFontStream(content) {
   return new Promise((resolve, reject) => {
     const fontmin = new Fontmin()
       .src(
-        path.join(__dirname, `../../assets/fonts/${prefixName}.${suffixType}`)
+        path.join(__dirname, `../../assets/fonts/优设标题黑.ttf`)
       )
       .use(Fontmin.glyph({ text: content }));
     fontmin.run((err, files) => {
@@ -22,10 +21,10 @@ function generateFontStream(fontName, content) {
 
 module.exports = async (req, res) => {
   const {
-    query: { fontName, content },
+    query: { content },
   } = req;
 
-  const file = await generateFontStream(fontName, content);
+  const file = await generateFontStream(content);
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('content-type', 'font/ttf');
   const bufferStream = new Stream.PassThrough();

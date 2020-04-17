@@ -1,8 +1,9 @@
-const { generateFontList } = require('./build');
+const { generateFontList, generateFonts } = require('./build');
 
-//
-// pre-build
-//
+/**
+ * pre-build API
+ */
 (async () => {
   await generateFontList();
+  await generateFonts();
 })();

@@ -4,13 +4,13 @@ const { writeFileSync, readFileSync, statSync } = require('fs');
 
 const { writeFile, readdir } = fsPromises;
 const resolveFile = file => path.resolve(__dirname, file);
+const fontList = require('./db/fontList.json');
 
 //
 // 生成字体 API
 //
 async function generateFonts() {
   const DIST_DIR = resolveFile('../api/fonts/');
-  const fontList = require('./db/fontList.json');
   const API_TMP_FILE = resolveFile('../api/fonts/tmp.js');
   try {
     const buffer = readFileSync(API_TMP_FILE);
@@ -20,8 +20,10 @@ async function generateFonts() {
         buffer.toString('utf8').replace(/#FONT_NAME#/g, font.name),
         'utf-8'
       );
-    })
-    console.log('[🦀️ iFont] PreBuildAPI: /fonts/[fontName].ttf build success!');
+    });
+    console.log(
+      '[🦀️ iFont] PreBuildAPI: /fonts/[fontName].ttf build success!'
+    );
   } catch (error) {
     throw error;
   }
@@ -37,11 +39,11 @@ async function generateFontList() {
     let nameList = await readdir(FONTS_DIR);
     nameList = nameList.map((name, index) => {
       const { size } = statSync(path.resolve(__dirname, FONTS_DIR, name));
-      const converSize = size => Number(size / 1024 / 1024).toFixed(2) + ' MB';
+      const converSize = s => `${Number(s / 1024 / 1024).toFixed(2)} MB`;
       return {
         id: index + 1,
         name,
-        size: converSize(size)
+        size: converSize(size),
       };
     });
     await writeFile(DIST_DIR, JSON.stringify(nameList, null, 2), 'utf-8');

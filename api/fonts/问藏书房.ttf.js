@@ -5,9 +5,7 @@ const path = require('path');
 function generateFontStream(content) {
   return new Promise((resolve, reject) => {
     const fontmin = new Fontmin()
-      .src(
-        path.join(__dirname, `../../assets/fonts/问藏书房.ttf`)
-      )
+      .src(path.join(__dirname, `../../assets/fonts/问藏书房.ttf`))
       .use(Fontmin.glyph({ text: content }));
     fontmin.run((err, files) => {
       if (err) reject(err);
